@@ -1,0 +1,22 @@
+package com.example.myapplication;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void scanRobotCar(View view) {
+        Intent deviceListActivity = new Intent(this, BluetoothDeviceListActivity.class);
+        startActivity(deviceListActivity);
+    }
+
+}
